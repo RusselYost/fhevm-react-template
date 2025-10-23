@@ -6,6 +6,12 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg)](https://www.typescriptlang.org/)
 [![Built for Zama](https://img.shields.io/badge/Built%20for-Zama-purple.svg)](https://www.zama.ai/)
 
+## 🌐 Quick Links
+
+- **Bounty GitHub**: [https://github.com/RusselYost/fhevm-react-template](https://github.com/RusselYost/fhevm-react-template)
+- **Live Example**: [https://fhe-flight-booking.vercel.app/](https://fhe-flight-booking.vercel.app/)
+- **Demo Video**: Download `demo.mp4` from repository to watch demonstration
+
 ## 🎯 What is This?
 
 A **universal SDK** that makes building encrypted applications as easy as using wagmi. Works with **React**, **Vue**, **Next.js**, **Node.js**, or any JavaScript environment.
@@ -297,7 +303,7 @@ import {
 
 ### Confidential Flight Booking
 
-See `examples/nextjs-confidential-flight/` for a complete example demonstrating:
+See `examples/nextjs-confidential-flight/` for a complete working example:
 
 - **Encrypted passenger data** (age, passport, seat)
 - **Private payments** (amounts hidden on-chain)
@@ -305,9 +311,11 @@ See `examples/nextjs-confidential-flight/` for a complete example demonstrating:
 - **Insurance privacy** (ebool type usage)
 - **VIP status** (encrypted boolean)
 
-**Live Demo**: [See deployment section]
+**Live Demo**: [https://fhe-flight-booking.vercel.app/](https://fhe-flight-booking.vercel.app/)
 
 **Contract**: Privacy-preserving flight booking with multiple FHE types (euint16, euint32, euint64, ebool)
+
+**Demo Video**: Download `demo.mp4` from the repository for a complete walkthrough
 
 ### Quick Setup Example
 
@@ -389,14 +397,15 @@ await client.init(provider);
 The example Confidential Flight Booking is deployed on Sepolia:
 
 - **Network**: Sepolia (Chain ID: 11155111)
-- **Contract**: [View on README in example]
-- **Live Demo**: [Deployment link]
+- **Contract**: `0xfdf50F46FDD1e307F80C89d5fa5c7c1E49ddae7C`
+- **Live Demo**: [https://fhe-flight-booking.vercel.app/](https://fhe-flight-booking.vercel.app/)
+- **GitHub**: [https://github.com/RusselYost/fhevm-react-template](https://github.com/RusselYost/fhevm-react-template)
 
 ### Environment Variables
 
 ```env
 NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/YOUR_KEY
-NEXT_PUBLIC_CONTRACT_ADDRESS=0x...
+NEXT_PUBLIC_CONTRACT_ADDRESS=0xfdf50F46FDD1e307F80C89d5fa5c7c1E49ddae7C
 NEXT_PUBLIC_GATEWAY_URL=https://gateway.zama.ai
 ```
 
@@ -433,19 +442,21 @@ MIT License - see LICENSE file for details
 
 ## 🎥 Video Demo
 
-See `demo.mp4` for a complete walkthrough of:
+Download `demo.mp4` from the repository for a complete walkthrough:
 - SDK installation (<1 minute)
 - Quick setup (<10 lines)
 - Encryption in action
 - Multiple framework examples
 - Design philosophy
 
+**Note**: The demo video must be downloaded to view locally.
+
 ## 🔗 Links
 
-- **GitHub**: [Repository URL]
-- **NPM**: `@fhevm/sdk` (planned)
-- **Documentation**: See README and example READMEs
-- **Live Demo**: [Deployment URL]
+- **Bounty GitHub**: https://github.com/RusselYost/fhevm-react-template
+- **Live Example**: https://fhe-flight-booking.vercel.app/
+- **Documentation**: See `docs/` folder and README files
+- **Contract**: 0xfdf50F46FDD1e307F80C89d5fa5c7c1E49ddae7C
 - **Zama**: https://www.zama.ai/
 
 ---
