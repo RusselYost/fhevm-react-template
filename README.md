@@ -178,15 +178,32 @@ const encrypted = await client.encrypt(true, 'bool');
 ## 🏗️ Architecture
 
 ```
-@fhevm/sdk
-├── core/           # Framework-agnostic client
-│   └── FhevmClient.ts
-├── hooks/          # React hooks
-│   └── useFhevm.ts
-├── vue.ts          # Vue composables
-├── types/          # TypeScript types
-├── utils/          # Validation & formatting
-└── index.ts        # Main exports
+fhevm-react-template/
+├── packages/
+│   └── fhevm-sdk/           # Core SDK package
+│       ├── core/            # Framework-agnostic client
+│       │   └── FhevmClient.ts
+│       ├── hooks/           # React hooks
+│       │   └── useFhevm.ts
+│       ├── vue.ts           # Vue composables
+│       ├── types/           # TypeScript types
+│       ├── utils/           # Validation & formatting
+│       └── index.ts         # Main exports
+│
+├── templates/               # Starter templates
+│   ├── nextjs/             # Next.js template
+│   ├── react/              # React template
+│   ├── vue/                # Vue template
+│   └── nodejs/             # Node.js template
+│
+├── examples/                # Complete examples
+│   ├── nextjs/             # Full Next.js example
+│   ├── nextjs-confidential-flight/  # Flight booking
+│   ├── react/              # React examples
+│   ├── vue/                # Vue examples
+│   └── nodejs/             # Node.js examples
+│
+└── docs/                   # Documentation
 ```
 
 **Design Philosophy:**
@@ -194,6 +211,8 @@ const encrypted = await client.encrypt(true, 'bool');
 - **Framework Adapters**: React hooks, Vue composables wrap the core
 - **Tree-Shakable**: Import only what you need
 - **Type-Safe**: Comprehensive TypeScript definitions
+- **Templates**: Quick-start templates for all frameworks
+- **Examples**: Production-ready reference implementations
 
 ## 📚 API Reference
 
@@ -299,17 +318,70 @@ import {
 | `bool` | true/false | `boolean` | `encrypt(true, 'bool')` |
 | `address` | Ethereum address | `string` | `encrypt('0x...', 'address')` |
 
-## 📖 Examples
+## 📖 Examples & Templates
 
-### Confidential Flight Booking
+### Templates (Quick Start)
 
-See `examples/nextjs-confidential-flight/` for a complete working example:
+The `templates/` directory contains starter templates for different frameworks:
 
+- **`templates/nextjs/`** - Complete Next.js 14 App Router example with SDK integration
+  - FHE Provider context
+  - API routes for encryption/decryption
+  - Real-world examples (banking, medical)
+  - Full TypeScript + Tailwind CSS
+
+- **`templates/react/`** - React + Vite starter template
+- **`templates/vue/`** - Vue 3 template with composables
+- **`templates/nodejs/`** - Node.js server-side example
+
+**Quick Start with Templates:**
+```bash
+cd templates/nextjs
+npm install
+npm run dev
+```
+
+### Complete Examples
+
+See `examples/` directory for comprehensive implementations:
+
+#### Next.js Example (`examples/nextjs/`)
+Complete Next.js application demonstrating all SDK features:
+- **Structure**: App Router with API routes
+- **Components**: FHE Provider, Encryption/Computation demos
+- **Examples**: Banking and medical use cases
+- **Integration**: Full SDK integration with hooks and utilities
+
+#### React Example (`examples/react/`)
+Simple React + Vite application with SDK integration:
+- **Encryption Demo**: Interactive encryption of different data types
+- **Decryption Demo**: Decrypt values from contracts
+- **Type Safety**: Full TypeScript support
+- **Minimal Setup**: Easy to understand and extend
+
+#### Vue Example (`examples/vue/`)
+Vue 3 Composition API example:
+- **Composables**: Vue-specific FHEVM composables
+- **Reactive**: Full reactivity with Vue 3
+- **TypeScript**: Complete type safety
+- **Modern**: Latest Vue 3 best practices
+
+#### Node.js Example (`examples/nodejs/`)
+Server-side encryption examples:
+- **Multiple Examples**: Encryption, decryption, contract interaction
+- **TypeScript**: Full type safety
+- **Easy Configuration**: Environment-based setup
+- **Production Ready**: Build and deploy examples
+
+#### Confidential Flight Booking (`examples/nextjs-confidential-flight/` & `examples/ConfidentialFlightBooking/`)
+Production-ready examples with:
 - **Encrypted passenger data** (age, passport, seat)
 - **Private payments** (amounts hidden on-chain)
 - **Confidential loyalty points** (calculated on encrypted data)
 - **Insurance privacy** (ebool type usage)
 - **VIP status** (encrypted boolean)
+- **React Version**: Modern React implementation with hooks
+- **Static Version**: Original HTML/JS implementation for reference
 
 **Live Demo**: [https://fhe-flight-booking.vercel.app/](https://fhe-flight-booking.vercel.app/)
 
