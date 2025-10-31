@@ -1,0 +1,24 @@
+{
+  "name": "fhevm-vue-example",
+  "version": "1.0.0",
+  "description": "Vue example with Universal FHEVM SDK",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fhevm/sdk": "^0.3.0",
+    "ethers": "^6.7.1",
+    "fhevmjs": "^0.5.0",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "@vue/tsconfig": "^0.5.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vue-tsc": "^1.8.25"
+  }
+}

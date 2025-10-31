@@ -1,0 +1,58 @@
+.app {
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.success-banner {
+  background: #d4edda;
+  color: #155724;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #c3e6cb;
+  font-weight: 600;
+  text-align: center;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.info-card ul {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.info-card li {
+  padding: 8px 0;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
